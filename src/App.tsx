@@ -1,8 +1,8 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { RiShareForwardLine } from 'react-icons/all';
 import "./App.css";
-import { Card, Container, MantineProvider, Text, Title } from "@mantine/core";
+import { Card, Container, MantineProvider, Text, Title, Image, List, Button, Avatar, Flex, Blockquote } from "@mantine/core";
+import { Carousel } from '@mantine/carousel';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -10,26 +10,60 @@ function App() {
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS>
       <Container>
-        <div>
-          <a href="https://vitejs.dev" target="_blank">
-            <img src={viteLogo} className="logo" alt="Vite logo" />
-          </a>
-          <a href="https://reactjs.org" target="_blank">
-            <img src={reactLogo} className="logo react" alt="React logo" />
-          </a>
-        </div>
-        <Title order={1}>Vite + React</Title>
+        <Container>
+          <Avatar size={200} maw={200} mx="auto" radius="500px" src="/girlsday-portfolio-smilla/GirlsDay-16.jpg" alt="Random image" />
+          <Text fw={500} fz={"60px"}>SMILLA</Text>
+        </Container>
+
+        <Container>
+
+        <Flex
+          mih={50}
+          gap="md"
+          direction="row"
+          wrap="nowrap"
+        >
+        <List>
+            <List.Item>Gitarre</List.Item>
+            <List.Item>Fußball</List.Item>
+            <List.Item>Malen</List.Item>
+        </List>
+
+          <Text fz={"17px"}>Ich habe zwei Hunde und verbringe gerne Zeit mit kreativen Dingen.
+         </Text>
+
+
+        </Flex>
+          
+        </Container>
+        
+        <Blockquote cite="– Smilla">
+        Der Weg ist das Ziel
+    </Blockquote>
+    
+    <Carousel
+     
+      height={240}
+  
+      slideGap="md"
+      loop
+      align="start"
+     
+    >
+      
+      <Carousel.Slide><Image height={220} fit="contain" src="/girlsday-portfolio-smilla/Laila und Nala.JPG" alt="Random image" /></Carousel.Slide>
+      <Carousel.Slide><Image src="/girlsday-portfolio-smilla/Wasserbild.JPG" alt="Random image" /></Carousel.Slide>
+      <Carousel.Slide><Image height={220} fit="contain" src="/girlsday-portfolio-smilla/Laila.jpg" alt="Random image" /></Carousel.Slide>
+      {/* ...other slides */}
+    </Carousel>
+
+       
+     
         <Card mt="xl">
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
-          <Text mt="sm">
-            Edit <code>src/App.tsx</code> and save to test HMR
-          </Text>
+          
+          
         </Card>
-        <Text mt="md" c="dimmed">
-          Click on the Vite and React logos to learn more
-        </Text>
+        
       </Container>
     </MantineProvider>
   );
