@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { RiShareForwardLine } from 'react-icons/all';
 import "./App.css";
-import { Card, Container, MantineProvider, Text, Title, Image, List, Button, Avatar, Flex, Blockquote } from "@mantine/core";
+import { Card, Container, MantineProvider, Text, Title, Image, List, Button, Avatar, Flex, Blockquote, Space } from "@mantine/core";
 import { Carousel } from '@mantine/carousel';
 
 function App() {
@@ -9,10 +9,11 @@ function App() {
 
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS>
-      <Container>
+      <Container bg={"#E7F5FF"}>
         <Container>
+          <Space h={50}></Space>
           <Avatar size={200} maw={200} mx="auto" radius="500px" src="/girlsday-portfolio-smilla/GirlsDay-16.jpg" alt="Random image" />
-          <Text fw={500} fz={"60px"}>SMILLA</Text>
+          <Text c=""fw={500} fz={"60px"}>SMILLA</Text>
         </Container>
 
         <Container>
@@ -59,10 +60,7 @@ function App() {
 
        
      
-        <Card mt="xl">
-          
-          
-        </Card>
+
         
       </Container>
     </MantineProvider>
